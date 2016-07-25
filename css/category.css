@@ -55,6 +55,10 @@ color:white;
  margin-top:100px;
 
 }
+.arrival{
+  width:300px;
+  height: 280px;
+}
 .space section{
 padding-right:15px;
 }
@@ -85,8 +89,7 @@ padding-right:15px;
   color:#02010A;
   letter-spacing:3px;
   font-size:40px;
-  font-family: monospace;
-  font-style: italic;
+
   font-weight: lighter;
   text-align:center
 }
@@ -115,26 +118,43 @@ h2 a:hover{
   margin-right: 10px;
   margin-bottom: 10px;
 }
+.middle
+{
+width:940px;
+height:450px;
+}
+.bm
+{
+  width:150px;
+}
 .reason h1
 {
   color: white;
-  font-family:fantasy;
+
   letter-spacing:1.5px;
   font-weight: lighter;
-  font-style: italic;
+  font-style:normal;
   font-size:30px;
   line-height: 20px;
 }
 
 
 #book{
-  font-family:fantasy;
+
   color:white;
   font-size:20px;
   line-height:10px;
   font-weight: normal;
   letter-spacing:1.5px;
 }
+.say{
+  width:200px;
+}
+.sayalan{
+  width:200px;
+   height:210px;
+ }
+
 .reason{
   margin-right:10px;
   margin-top:20px;
@@ -173,7 +193,10 @@ background-color:#e3e3e3;
 .csecond{
   margin-top:15px;
 }
-
+.catpic{
+  width:100%;
+  height:180px;
+}
 .image section{
 padding-right:0;
 }
@@ -201,6 +224,10 @@ h3{
   font-style: italic;
   font-family:monospace;
   color:white;
+}
+.last{
+  height:25;
+  width:35px;
 }
 footer{
   background-color:#606261;
@@ -266,6 +293,14 @@ background-color:#e3e3e3;
   margin-top:30px;
   margin-bottom:25px;
 }
+.bpic{
+    width:100%;
+    height:160px;
+  }
+  .marketing{
+    width:100%;
+    height:160px;
+  }
 .cprimary p{
   font-size:12px;
   font-family:serif;
@@ -296,18 +331,16 @@ footer li{
   font-size:20px;
   color:black;
   line-height:30px;
-  font-family:serif;
 }
 .primary{
   margin-top:100px;
   margin-bottom:100px;
 }
 .primary{
-  /*
-background-color:#e3e3e3;
-*/
  margin-top:100px;
-
+}
+#text{
+  font-size:18px;
 }
 /*-----------------------------------------------------------*/
 
@@ -318,11 +351,14 @@ background-color:#e3e3e3;
 }
 .grid_6{
   width:50%;
-  padding-right:0;
+  padding-right:10px;
   margin-left:10px;
   margin-bottom:10px;
   margin-top:120px;
 
+}
+.reg{
+  width:100%;
 }
 .title h1{
   font-size:30px;
