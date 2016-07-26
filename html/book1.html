@@ -14,8 +14,8 @@
 <body>
 <div class="wrap container_12">
 <header class="clearfix">
-<h1 class="grid_5 down heading">BOOKSTORE</h1>
-<nav class="grid_7 down1">
+<h1 class="grid_7 down heading">BOOKSTORE</h1>
+<nav class="grid_5 down1">
 <ul>
 <li><a href="book1.html">Home</a></li>
 <li><a href="category.html">Categories</a></li>
@@ -28,32 +28,65 @@
 </header>
 <div class="mprimary grid_12">
 <section class="imagee1 hero">
-<img  src="../image/Books.jpg" alt="herounit"  />
-<h1>Bookstore &nbsp Welcomes &nbsp you!<br />&nbsp &nbsp Have &nbsp a &nbsp Pleasant &nbsp Shopping!<br /><br/><br/>
-<a href="login.html">Here you go</a></h1>
+<img class="mySlides" src="../image/Books.jpg">
+ <img class="mySlides" src="../image/hero5.png" >
+  <img class="mySlides"  src="../image/hero1.jpg" >
+   <img class="mySlides" src="../image/hero2.jpg" >
+   <img class="mySlides" src="../image/slide1.jpg" >
+   <img class="mySlides" src="../image/slide3.jpg" >
 </section>
 </div>
-<div class=" space grid_4 alpha">
-<section class="home imagee">
-  <img   src="../image/kids.jpg" alt="newarrival_kid"  />
-  <h2>New Arrivals <br />
-  <a href="">  CHIDREN'S</a></h2>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+</script>
+<div class="prod_head grid_12">
+<h2>NEW ARRIVALS</h2>
+</div>
+<div class=" cprimary   grid_2 ">
+  <section class=" mbook image">
+<a href=""><img class="marketing" src="../image/bub1.jpg" alt="business"  />
+
 </section>
 </div>
- <div class=" space grid_4">
-<section class="home imagee">
-    <img  src="../image/educations.jpg" alt="newarrival_education"/>
-    <h2>New Arrivals <br />
-      <a href="">EDUCATION</a></h2>
+<div class=" cprimary   grid_2 ">
+  <section class=" mbook image">
+<a href=""><img class="marketing" src="../image/bub1.jpg" alt="business"  />
+
 </section>
 </div>
-<div class=" space grid_4 omega" >
-  <section class="home imagee">
-  <img  src="../image/business.jpg" alt="newarrival_businees"  />
-  <h2>New Arrivals <br />
-    <a href=""> BUSINESS</a></h2>
+<div class=" cprimary  grid_2 ">
+  <section class="mbook image">
+<a href=""><img class="marketing" src="../image/bub1.jpg" alt="business"  />
+
 </section>
 </div>
+<div class=" cprimary   grid_2 ">
+  <section class="mbook homepic">
+<a href=""><img class="marketing" src="../image/bub1.jpg" alt="business"  />
+
+</section>
+</div>
+<div class=" cprimary   grid_2 ">
+  <section class="mbook homepic">
+<a href=""><img class="marketing" src="../image/bub1.jpg" alt="business"  />
+
+</section>
+</div>
+
+
 
 <div class="reason grid_7">
   <h1 align="left">Why To Read?</h1><br>
