@@ -88,19 +88,18 @@ padding-right:15px;
   text-align:center
 }
 .prod_head{
-<<<<<<< HEAD
- /*border:1px solid black;*/
-=======
 
->>>>>>> 5f0bacd17f92b1da19d10f628dd2bbba51284106
-  margin-bottom:5px;
+ /*border:1px solid black;*/
+
+
+
 }
 .prod_head h2{
   margin-right: 5px;
   margin-left: 5px;
   margin-top:-90px;
   font-size:18px;
-<<<<<<< HEAD
+
   color:white;
   font-weight: bolder;
   letter-spacing:2px;
@@ -109,22 +108,7 @@ padding-right:15px;
 }
 
 
-=======
-  font-weight: bolder;
-  letter-spacing:2px;
-  border-bottom:3px solid black;
-}
-div .mbook{
 
- padding-right:15px;
- margin-bottom:10px;
- margin-top:-140px;
-}
-div .homepic{
-  width: 100%;
-  height: 160px;
-}
->>>>>>> 5f0bacd17f92b1da19d10f628dd2bbba51284106
 h2 a{
   text-decoration: none;
   color:black;
@@ -148,12 +132,12 @@ h2 a:hover{
   margin-right: 10px;
   margin-bottom: 20px;
 }
-<<<<<<< HEAD
+
 .newtop
 {
   margin-bottom:30px;
   margin-left:25px;
-  margin-top:-60px;
+  margin-top:-10px;
 }
 /*
 .service
@@ -163,57 +147,7 @@ h2 a:hover{
 }
 
 */
-=======
 
-
-.reason h1
-{
-  color: white;
-
-  letter-spacing:1.5px;
-  font-weight: lighter;
-  font-style:normal;
-  font-size:30px;
-  line-height: 20px;
-}
-
-
-#book{
-
-  color:white;
-  font-size:20px;
-  line-height:10px;
-  font-weight: normal;
-  letter-spacing:1.5px;
-}
-.say{
-  width:200px;
-}
-.sayalan{
-  width:200px;
-   height:210px;
- }
-
-.reason{
-  margin-right:10px;
-  margin-top:20px;
-  margin-left:10px;
-
-}
-.quote{
-  margin-top:25px;
-}
-.saying{
-  margin-bottom:13px;
-}
-blockquote{
-  color: white;
-  font-weight: normal;
-  font-family: cursive;
-  font-style: italic;
-}
-
->>>>>>> 5f0bacd17f92b1da19d10f628dd2bbba51284106
 
 /*---------------------category css--------------------------*/
 .grid_3
@@ -238,11 +172,10 @@ background-color:#e3e3e3;
   height:180px;
 }
 .image section{
-<<<<<<< HEAD
+
 padding-left:10px;
-=======
+
 padding-right:0;
->>>>>>> 5f0bacd17f92b1da19d10f628dd2bbba51284106
 }
 .image:hover
 {
@@ -322,14 +255,9 @@ margin-left: 10px;
   display:block;
   background-color:#606261;
 }
+
 .grid_2{
-<<<<<<< HEAD
-  /*
-  margin-top:90px;
-*/
-=======
-  margin-top:90px;
->>>>>>> 5f0bacd17f92b1da19d10f628dd2bbba51284106
+/*  margin-top:90px;*/
   padding-left: 5px;
   padding-right:10px;
 }
