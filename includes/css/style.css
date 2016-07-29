@@ -45,7 +45,13 @@ body{
 }
 ul.unstyled {
 	list-style: none;
+
 	padding: 0;
+  font-size:14px;
+}
+ul.unstyled a
+{
+  text-decoration: none;
 }
 
 /* --------------------------------------
