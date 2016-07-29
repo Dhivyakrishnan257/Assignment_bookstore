@@ -1,0 +1,223 @@
+/*
+
+My Custom CSS
+=============
+
+Author:  Brad Hussey
+Updated: August 2013
+Notes:	 Hand coded for Udemy.com
+
+*/
+
+
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+
+   footer {
+   	background: #333;
+   	color: #eee;
+   	font-size: 11px;
+   	padding: 20px;
+   }
+
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+
+body{
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.well .page-header {
+  margin-top:0;
+}
+.well .page-header h1{
+  margin-top:0;
+}
+#textalign p{
+  text-align: justify;
+}
+#moreinfo p
+{
+  font-size:16px;
+  text-align:justify;
+}
+ul.unstyled {
+	list-style: none;
+	padding: 0;
+}
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+   #searchbook
+   {
+     width:250px;
+   }
+   .navbar-brand
+   {
+     padding:13px 15px;
+   }
+   .navbar-nav
+   {
+     padding-right:10px;
+   }
+   #menusize
+   {
+     font-size:18px;
+     font-weight:bolder;
+   }
+  .navbar-nav ,.navbar-form
+  {
+    margin-top:40px;
+  }
+  body{
+
+  }
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+#mycarousel
+{
+  margin-top: 134px;
+}
+  #mycarousel .item
+  {
+    height: 400px;
+  }
+.carousel-caption{
+  padding-bottom:200px;
+  color:white;
+
+}
+#slide1
+{
+  background:url('../../images/herobanner0.jpg') top center no-repeat;
+}
+#slide2
+{
+  background:url('../../images/herobanner1.jpg') top center no-repeat;
+}
+#slide3
+{
+  background:url('../../images/herobanner2.jpg') top center no-repeat;
+}
+#slide4
+{
+  background:url('../../images/herobanner3.jpg') top center no-repeat;
+}
+#slide5
+{
+  background:url('../../images/herobanner4.jpg') top center no-repeat;
+}
+/* --------------------------------------
+   Global Styles
+   -------------------------------------- */
+.well{
+  margin:20px 0;
+}
+.box-title{
+  border-bottom:3px solid  #bf8040;
+}
+.belowspace h3
+{
+  margin-bottom:45px;
+  font-weight:bolder;
+}
+.box-product .price {
+	font-size:11px;
+	position: absolute;
+	top: -10px;
+	right: 0px;
+	padding: 5px;
+}
+.box-product img{
+margin-bottom:10px;
+}
+.box-product p{
+  margin-bottom:-9px;
+}
+.box-product a{
+  text-decoration: none;
+}
+.box-product span.glyphicon {
+	margin-right: 5px;
+}
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 480px) {
+  #mycarousel .item
+  {
+    height: 250px;
+  }
+  #slide1
+  {
+    background:url('../../images/hero2_mini.jpg') top center no-repeat;
+  }
+  #slide2
+  {
+    background:url('../../images/hero4_mini.jpg') top center no-repeat;
+  }
+  #slide3
+  {
+    background:url('../../images/hero5_mini.png') top center no-repeat;
+  }
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  #mycarousel .item
+  {
+    height: 310px;
+  }
+  #slide1
+  {
+    background:url('../../images/hero2_small.jpg') top center no-repeat;
+  }
+  #slide2
+  {
+    background:url('../../images/hero4_small.jpg') top center no-repeat;
+  }
+  #slide3
+  {
+    background:url('../../images/hero5_small.png') top center no-repeat;
+  }
+
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  #mycarousel .item
+  {
+    height: 500px;
+  }
+  #slide1
+  {
+    background:url('../../images/herobanner1.jpg') top center no-repeat;
+  }
+  #slide2
+  {
+    background:url('../../images/herobanner0.jpg') top center no-repeat;
+  }
+  #slide3
+  {
+    background:url('../../images/herobanner2.jpg') top center no-repeat;
+  }
+  #slide4
+  {
+    background:url('../../images/herobanner3.jpg') top center no-repeat;
+  }
+  #slide5
+  {
+    background:url('../../images/herobanner4.jpg') top center no-repeat;
+  }
+  .carousel-caption{
+    padding-bottom:200px;
+    color:white;
+
+}
