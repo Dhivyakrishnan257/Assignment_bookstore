@@ -1,0 +1,215 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/960_12_col.css">
+<link rel="stylesheet" href="../css/text.css">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/category.css">
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+<title>Bookstore</title>
+</head>
+<body>
+<div class="wrap container_12">
+<header class="clearfix">
+<h1 class="grid_7 down heading">BOOKSTORE</h1>
+<nav class="grid_5 down1">
+<ul>
+<li><a href="book1.html">Home</a></li>
+<li><a href="category.html">Categories</a></li>
+
+<li><a href="login.html">Login/Signup</a></li>
+
+<li><a href="contact.html">Contact us </a></li>
+</ul>
+</nav>
+</header>
+<div class="mprimary grid_12">
+<section class="imagee1 hero">
+<img class="mySlides" src="../image/Books.jpg">
+ <img class="mySlides" src="../image/hero5.png" >
+   <img class="mySlides" src="../image/hero2.jpg" >
+   <img class="mySlides" src="../image/slide1.jpg" >
+   <img class="mySlides" src="../image/slide3.jpg" >
+</section>
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+</script>
+  
+<div class="prod_head grid_12">
+<h2>NEW ARRIVALS</h2>
+</div>
+
+<div class=" cprimary newtop grid_2">
+  <section class="image ">
+<a href=""><img  class="bpic"  src="../image/biob2.jpg" alt="biography" />
+  <p>American Sniper
+by Chris Kyle and Scott McEwen </a> <br>Kindle Edition &nbsp Rs.228.00
+  </p>  </a>
+</section>
+</div>
+<div class=" cprimary newtop grid_2 ">
+  <section class="image ">
+<a href=""><img class="cpic" src="../image/chib3.jpg" alt="children" />
+  <p>365 Bedtime Stories
+by Om Books</a> <br>2007 Edition &nbsp Rs.350.00
+  </p>  </a>
+</section>
+</div>
+<div class=" cprimary newtop grid_2 ">
+  <section class="image">
+<a href=""><img class="cpic" src="../image/chib7.jpg" alt="children" />
+  <p>Grandma's Bag of Stories
+by Sudha Murty</a> <br>Kindle Edition  &nbsp Rs.123.75
+  </p></a>
+</section>
+</div>
+<div class=" cprimary newtop grid_2 ">
+  <section class="image">
+<a href=""><img  class="bpic"  src="../image/biob6.jpg" alt="biography" />
+  <p>Portrait of a Woman
+by Robert K. Massie</a> <br>Kindle Edition &nbsp Rs.227.0
+  </p></a>
+</section>
+</div>
+<div class=" cprimary newtop grid_2 omega ">
+  <section class="image">
+<a href=""><img  class="bpic"  src="../image/biob7.jpg" alt="biography"  />
+  <p>I Am Malala
+by Malala Yousafzai & Christina</a> <br>Kindle Edition  &nbsp Rs.104.50
+  </p></a>
+</section>
+</div>
+
+<div class="prod_head grid_12">
+<h2>BEST SELLERS</h2>
+</div>
+<div class=" cprimary newtop grid_2 ">
+  <section class="image">
+<a href=""><img class="cpic" src="../image/chib12.jpg" alt="children" />
+  <p>I Have Eczema... So What?
+by Anindita Guha Maulik</a> <br>Kindle Edition Rs.225.00
+  </p></a>
+</section>
+</div>
+<div class=" cprimary newtop grid_2 ">
+  <section class="image">
+<a href=""><img class="cpic" src="../image/chib10.jpg" alt="children"  />
+  <p>Fairy Tales
+by Dreamland Publications</a> <br>Kindle Edition  &nbsp Rs.145.00
+  </p></a>
+</section>
+</div>
+<div class=" cprimary newtop grid_2 ">
+  <section class="image">
+<a href=""><img class="bpic" src="../image/chib2.jpg" alt="children" />
+  <p>The Order of the Phoenix
+by J.K. Rowling</a> <br>2012 Edition &nbsp Rs.385.00
+  </p>  </a>
+</section>
+</div>
+<div class=" cprimary newtop grid_2 ">
+  <section class="image">
+<a href=""><img class="marketing" src="../image/bub5.jpg" alt="business" />
+  <p>Here Comes Everybody
+by Clay Shirky</a> <br>Kindle Edition&nbsp Rs427.50
+  </p></a>
+</section>
+</div>
+<div class=" cprimary newtop grid_2 ">
+  <section class="image">
+<a href=""><img class="marketing" src="../image/bub7.jpg" alt="business"  />
+  <p>The Lords of Strategy
+by Lords</a> <br>Kindle Edition  &nbsp Rs.625.00
+  </p></a>
+</section>
+</div>
+<div class="prod_head grid_12">
+<h2>UPCOMING BOOKS</h2>
+</div>
+<div class=" cprimary newtop grid_2 ">
+  <section class="image">
+<a href=""><img class="cpic" src="../image/chib12.jpg" alt="children" />
+  <p>I Have Eczema... So What?
+by Anindita Guha Maulik</a> <br>Kindle Edition Rs.225.00
+  </p></a>
+</section>
+</div>
+<div class=" cprimary newtop grid_2 ">
+  <section class="image">
+<a href=""><img class="cpic" src="../image/chib10.jpg" alt="children"  />
+  <p>Fairy Tales
+by Dreamland Publications</a> <br>Kindle Edition  &nbsp Rs.145.00
+  </p></a>
+</section>
+</div>
+<div class=" cprimary newtop grid_2 ">
+  <section class="image">
+<a href=""><img class="bpic" src="../image/chib2.jpg" alt="children" />
+  <p>The Order of the Phoenix
+by J.K. Rowling</a> <br>2012 Edition &nbsp Rs.385.00
+  </p>  </a>
+</section>
+</div>
+<div class=" cprimary newtop grid_2 ">
+  <section class="image">
+<a href=""><img class="marketing" src="../image/bub5.jpg" alt="business" />
+  <p>Here Comes Everybody
+by Clay Shirky</a> <br>Kindle Edition&nbsp Rs427.50
+  </p></a>
+</section>
+</div>
+<div class=" cprimary newtop grid_2 ">
+  <section class="image">
+<a href=""><img class="marketing" src="../image/bub7.jpg" alt="business"  />
+  <p>The Lords of Strategy
+by Lords</a> <br>Kindle Edition  &nbsp Rs.625.00
+  </p></a>
+</section>
+</div>
+<div class="service grid_12">
+</div>
+
+
+
+
+
+
+    </div>
+
+    <div class="container_12">
+    <footer >
+      <nav align="center">
+      <ul>
+        <li><a href="">Terms</a></li>
+        <li><a href="">Privacy</a></li>
+        <li><a href="">Security</a></li>
+        <li><a href="">Status</a></li>
+      </ul>
+    </nav><br>
+      <h3 align="center">Follow us on  <a href=""><img class="last" src="../image/fb.png" /></a>
+  <a href=""><img class="last" src="../image/twitter.png" /></a>
+ <a href=""><img class="last" src="../image/Pin.png" /></a>
+ <a href=""><img class="last" src="../image/google.png" /></a>
+<a href=""><img class="last" src="../image/utube.png" /></a></h3>
+</footer>
+
+</div>
+</body>
+</html>
