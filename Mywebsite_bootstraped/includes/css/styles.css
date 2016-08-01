@@ -1,0 +1,155 @@
+/*
+
+My Custom CSS
+=============
+
+Author:  Brad Hussey
+Updated: August 2013
+Notes:	 Hand coded for Udemy.com
+
+*/
+
+
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+
+
+
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+
+body{
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.well .page-header {
+  margin-top:0;
+}
+.well .page-header h1{
+  margin-top:0;
+}
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+   #searchbook
+   {
+     width:600px;
+   }
+   .navbar-brand
+   {
+     padding:13px 15px;
+   }
+   .navbar-nav
+   {
+      color:white;
+   }
+.navbar-fixed-top{
+    background-color: #80d4ff;
+
+  }
+  .navbar-form{
+    margin-top:40px;
+  }
+  body{
+
+  }
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+#mycarousel{
+  margin-top: 60px;
+}
+  #mycarousel .item
+  {
+    height: 400px;
+  }
+#slide1
+{
+  background:url('../../images/hero2.jpg') top center no-repeat;
+}
+#slide2
+{
+  background:url('../../images/hero4.jpg') top center no-repeat;
+}
+#slide3
+{
+  background:url('../../images/hero5.png') top center no-repeat;
+}
+
+/* --------------------------------------
+   Global Styles
+   -------------------------------------- */
+.well{
+  margin:20px 0;
+}
+
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 480px) {
+  #mycarousel .item
+  {
+    height: 250px;
+  }
+  #slide1
+  {
+    background:url('../../images/hero2_mini.jpg') top center no-repeat;
+  }
+  #slide2
+  {
+    background:url('../../images/hero4_mini.jpg') top center no-repeat;
+  }
+  #slide3
+  {
+    background:url('../../images/hero5_mini.png') top center no-repeat;
+  }
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  #mycarousel .item
+  {
+    height: 310px;
+  }
+  #slide1
+  {
+    background:url('../../images/hero2_small.jpg') top center no-repeat;
+  }
+  #slide2
+  {
+    background:url('../../images/hero4_small.jpg') top center no-repeat;
+  }
+  #slide3
+  {
+    background:url('../../images/hero5_small.png') top center no-repeat;
+  }
+
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  #mycarousel .item
+  {
+    height: 500px;
+  }
+  #slide1
+  {
+    background:url('../../images/hero2.jpg') top center no-repeat;
+  }
+  #slide2
+  {
+    background:url('../../images/hero3.jpg') top center no-repeat;
+  }
+  #slide3
+  {
+    background:url('../../images/hero1.jpg') top center no-repeat;
+  }
+
+}
