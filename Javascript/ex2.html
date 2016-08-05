@@ -1,0 +1,23 @@
+<script>
+var myObj =
+[{'name':'Saurabh', 'age': 30, 'occupation': "Team Leader"},
+{'name':'Anupriya', 'age': 32, 'occupation': "Team Leader"},
+{'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
+{'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
+{'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
+{'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];
+var age = [];
+var age1 = [];
+for (i in myObj)
+{
+age[i]=myObj[i].age;
+age1[i]=myObj[i].age;
+}
+age1.sort();
+for(i=myObj.length-1;i>=0;i--)
+{
+ var j = age.indexOf(age1[i]);
+ document.write("<br />" +myObj[j].name +" ," +myObj[j].age +" ," +myObj[j].occupation );
+}
+
+</script>

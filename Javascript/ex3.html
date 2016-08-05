@@ -1,0 +1,45 @@
+
+<script>
+var myObj =
+[{'name':'Saurabh', 'age': 30, 'occupation': "Team Leader"},
+{'name':'Anupriya', 'age': 32, 'occupation': "Team Leader"},
+{'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
+{'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
+{'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
+{'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];
+var i,j=0;
+var occ = [];
+occ[j] = myObj[0].occupation;
+for(i=1;i<myObj.length;i++)
+{
+ for(j=0;j<occ.length;j++)
+ {
+   if(myObj[i].occupation==occ[j])
+   {
+     break;
+   }
+ }
+ if(j==occ.length)
+ {
+   occ[occ.length]=myObj[i].occupation;
+ }
+}
+var Obj = new Object();
+for(i=0;i<occ.length;i++)
+{
+ var arr = [];
+ for(j=0;j<myObj.length;j++)
+ {
+   if(occ[i]==myObj[j].occupation)
+   {
+   arr.push( {name:myObj[j].name , age:myObj[i].age} );
+   }
+ }
+ Obj[occ[i]]=arr;
+}
+console.log(Obj);
+for(i in Obj)
+{
+ document.write("<br />" +Obj[i].name +" ," +Obj[i].age);
+}
+</script>

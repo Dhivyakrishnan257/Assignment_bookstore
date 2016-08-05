@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Looping in Javascript</title>
+<script type="text/javascript">
+
+var arr=[];
+arr[0]="Love like this";
+arr[1]="Nobody but you";
+arr[2]="Love you like a love song";
+arr[3]="Because i'm stupid";
+arr[4]="Let's Party";
+arr[5]="Innocence";
+var i=0;
+/*
+//while-loop
+while(i<arr.length)
+{
+document.write("<br />Now playing:"+arr[i]);
+i++;
+}
+
+//do-while
+var result=false;
+do{
+  document.write("This is Do While script!");
+}while(result);
+
+//for-loop
+for (i=0;i<arr.length;i++)
+{
+  document.write("<br />Now Playing:"+arr[i]);
+}
+*/
+//for ...in
+for(i in arr)
+{
+  document.write("<br />Now Playing:"+arr[i]);
+}
+</script>
+</head>
+<body >
+<h1>Looping in Javascript</h1>
+</body>
+</html>
