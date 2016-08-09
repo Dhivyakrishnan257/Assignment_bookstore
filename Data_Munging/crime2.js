@@ -4,9 +4,7 @@ var stream = require('stream');
 var crime=new Object();
 var line_num=0;
 var primary_index,year_index,arrest_index;
-//Function
 
-//code to split and create object
 var instream = fs.createReadStream('crime.csv');
 var outstream = new stream;
 var rl = readline.createInterface(instream,outstream);
@@ -14,7 +12,7 @@ var rl = readline.createInterface(instream,outstream);
 rl.on('line', function(line) {
      var res=line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
      line_num++;
-     //console.log(line_num);
+
      if(line_num === 1)
      {
          for(i=0;i<res.length;i++)
@@ -60,7 +58,7 @@ rl.on('line', function(line) {
 
 rl.on('close', function() {
 
-  for(i=2001;i<=2016;i++)
+  for(i in crime)
   {
     crime[i].arrested=crime[i][true];
     delete crime[i][true];
@@ -70,5 +68,5 @@ rl.on('close', function() {
   console.log(crime);
   json_convert=JSON.stringify(crime);
   fs.writeFile('crime2.json',json_convert);
-  console.log("file writing done");
+  console.log("Completed job");
 });
