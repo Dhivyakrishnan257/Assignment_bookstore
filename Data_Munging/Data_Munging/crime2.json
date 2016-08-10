@@ -1,0 +1,66 @@
+{
+	"2001": {
+		"arrested": 7150,
+		"notarrested": 24233
+	},
+	"2002": {
+		"arrested": 7340,
+		"notarrested": 24181
+	},
+	"2003": {
+		"arrested": 6909,
+		"notarrested": 22568
+	},
+	"2004": {
+		"arrested": 7004,
+		"notarrested": 21846
+	},
+	"2005": {
+		"arrested": 6631,
+		"notarrested": 20435
+	},
+	"2006": {
+		"arrested": 6288,
+		"notarrested": 19657
+	},
+	"2007": {
+		"arrested": 6550,
+		"notarrested": 19764
+	},
+	"2008": {
+		"arrested": 5316,
+		"notarrested": 20131
+	},
+	"2009": {
+		"arrested": 5700,
+		"notarrested": 17161
+	},
+	"2010": {
+		"arrested": 5051,
+		"notarrested": 16484
+	},
+	"2011": {
+		"arrested": 5185,
+		"notarrested": 15225
+	},
+	"2012": {
+		"arrested": 4792,
+		"notarrested": 15105
+	},
+	"2013": {
+		"arrested": 4460,
+		"notarrested": 13511
+	},
+	"2014": {
+		"arrested": 4495,
+		"notarrested": 12400
+	},
+	"2015": {
+		"arrested": 4038,
+		"notarrested": 12989
+	},
+	"2016": {
+		"arrested": 944,
+		"notarrested": 4087
+	}
+}
