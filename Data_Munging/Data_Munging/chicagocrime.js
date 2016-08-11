@@ -2,9 +2,11 @@ var fs = require('fs');
 var readline = require('readline');
 var stream = require('stream');
 var crime=new Object();
+var crimee=new Object();
 var line_num=0;
-var arrformat = [];
-var desc_index,year_index;
+var arr = [];
+var arr1 = [];
+var desc_index,year_index,primary_type,arrest_index;
 
 var instream = fs.createReadStream('crime.csv');
 var outstream = new stream;
@@ -25,6 +27,14 @@ rl.on('line', function(line) {
            else if (res[i]=="Description")
            {
              desc_index = i;
+           }
+           else if (res[i]=="Primary Type")
+           {
+             primary_index = i;
+           }
+           else if(res[i]=="Arrest")
+           {
+             arrest_index=i;
            }
          }
      }
@@ -50,6 +60,26 @@ rl.on('line', function(line) {
            }
          }
 
+         ////////////////////
+         if(res[primary_index]=="ASSAULT")
+           {
+             if(crimee[res[year_index]] == undefined)
+             {
+               crimee[res[year_index]]={};
+                crimee[res[year_index]][res[arrest_index]] = 1;
+             }
+             else
+             {
+               if(crimee[res[year_index]][res[arrest_index]] == undefined)
+               {
+                 crimee[res[year_index]][res[arrest_index]] = 1;
+               }
+               else
+               {
+               crimee[res[year_index]][res[arrest_index]]++;
+               }
+             }
+           }
      }
 });
 
@@ -62,11 +92,34 @@ for(i in crime)
     crimedata.description =j;
     crimedata.value = crime[i][j];
     crimedata.year = i;
-    arrformat.push(crimedata);
+    arr.push(crimedata);
+  }
+}
+//for part2
+for(var i in crimee)
+{
+  crimee[i].arrested=crimee[i][true];
+ delete crimee[i][true];
+  crimee[i].notarrested=crimee[i][false];
+delete crimee[i][false];
+}
+  for(i in crimee)
+{
+  for(j in crimee[i])
+   {
+    var crimedataa = {};
+    crimedataa.description =j;
+    crimedataa.value = crimee[i][j];
+    crimedataa.year = i;
+    arr1.push(crimedataa);
   }
 }
 
-console.log(arrformat);
-var json_convert=JSON.stringify(arrformat);
+
+console.log(arr);
+console.log(arr1);
+var json_convert=JSON.stringify(arr);
 fs.writeFile('crimes.json',json_convert);
+var json_convert=JSON.stringify(arr1);
+fs.writeFile('crimes2.json',json_convert);
 });

@@ -3,6 +3,7 @@ var readline = require('readline');
 var stream = require('stream');
 var crime=new Object();
 var line_num=0;
+var arrformat = [];
 var primary_index,year_index,arrest_index;
 
 var instream = fs.createReadStream('crime.csv');
@@ -57,24 +58,26 @@ rl.on('line', function(line) {
 });
 
 
+rl.on('close', function() {
+  for(var i in crime)
+  {
+    crime[i].arrested=crime[i][true];
+   delete crime[i][true];
+    crime[i].notarrested=crime[i][false];
+  delete crime[i][false];
+  }
+
+
 
   for(i in crime)
   {
-    crime[i].arrested=crime[i][true];
-  //  delete crime[i][true];
-    crime[i].notarrested=crime[i][false];
-  //  delete crime[i][false];
-  }
-
-  var dataset = require('./crime2.json');
-  var arrformat = [];
-  for(i in dataset) {
-    for(j in dataset[i]) {
-      var crime = {};
-      crime.description =j;
-      crime.value = dataset[i][j];
-      crime.year = i;
-      arrformat.push(crime);
+    for(j in crime[i])
+     {
+      var crimedata = {};
+      crimedata.description =j;
+      crimedata.value = crime[i][j];
+      crimedata.year = i;
+      arrformat.push(crimedata);
     }
   }
 
@@ -83,3 +86,4 @@ rl.on('line', function(line) {
   console.log(arrformat);
   var json_convert=JSON.stringify(arrformat);
   fs.writeFile('crimes2.json',json_convert);
+});
