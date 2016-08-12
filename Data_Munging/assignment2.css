@@ -1,0 +1,28 @@
+#text{
+text-align:center;
+color:magenta;
+}
+body{
+  background-color: gray;
+}
+table{
+  border-collapse:collapse;
+  align-items: center;
+  width:50%
+
+}
+table,td,th{
+  border:2px solid green;
+  padding: 15px;
+}
+th{
+  background-color: red;
+  color:white;
+}
+td{
+  background-color: rgb(68,187,160);
+  color:white;
+}
+.container{
+  margin-left: 340;
+}

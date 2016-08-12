@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chicago Crime Data</title>
+<link href="assignment2.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<script>
+
+var pagesize=4;
+var currentPagenumber=1;
+var startid=0;
+var endid=currentPagenumber*pagesize;
+var totalpagenumbers;
+var objData;
+$(document).ready(function (){
+$.getJSON("crimes.json", function (jsonData)
+{
+  objData=jsonData;
+  if(objData !=undefined)
+  {
+    totalpagenumbers=Math.ceil(objData.length/pagesize);
+    bindata(currentPagenumber);
+  }
+});
+});
+function bindata(pageno)
+{
+  var currentPagenumber=pageno;
+  endid=(currentPagenumber*pagesize);
+  startid=endid-pagesize;
+    $('#tabdynamic').html("");
+  $('#tabdynamic').append('<table></table>');
+   var tr=$('#tabdynamic').children();
+   tr.append("<tr><th>YEAR</th><th>UNDER $500</th><th>ABOVE $500</th></tr>")
+  if (endid>objData.length)
+  endid=objData.length;
+   for(i=startid;i<endid;i++)
+   {
+     tr.append("<tr><td>"+objData[i].year+"</td><td>"+objData[i].under_500+"</td><td>"+objData[i].above_500+"</td>");
+ }
+ $('#buttons').html("");
+ for(i=0;i<totalpagenumbers;i++)
+ {
+   $('#buttons').append('<button type="button" class="btn btn-secondary" onclick="bindata('+ (i+1) +')">'+ (i+1) + '</button>');
+ }
+}
+
+</script>
+</head>
+<body>
+
+<h1 id="text"> Chicago Crime Data</h1>
+<center><div id="tabdynamic"></center>
+  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-left:900px; margin-top:300px">
+    <div class="btn-group"  role="group" aria-label="First group" id="buttons"></div>
+    </div>
+</div>
+</body>
+</html>

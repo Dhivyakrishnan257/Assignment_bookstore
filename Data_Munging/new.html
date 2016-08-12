@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chicago Crime Data</title>
+<link href="assignment2.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<script>
+
+$(document).ready(function (){
+$.getJSON("crimes.json", function (data) {
+  $('#tabdynamic').append('<table></table>');
+   var tr=$('#tabdynamic').children();
+   tr.append("<tr><th>YEAR</th><th>UNDER $500</th><th>ABOVE $500</th></tr>")
+   var obj={};
+   var i;
+   for(i=0;i<data.length;i++)
+   {
+     obj[i]=data[i];
+     tr.append("<tr><td>"+obj[i].year+"</td><td>"+obj[i].under_500+"</td><td>"+obj[i].above_500+"</td>");
+ }
+   });
+});
+var pageno=document.getElementById('1').value;
+function bindata(){
+    for(i=0;i<4;i++)
+  {
+    var obj1=obj[i];
+    console.log(obj1);
+  }
+}
+
+</script>
+</head>
+<body>
+
+<h1 id="text"> Chicago Crime Data</h1>
+<center><div id="tabdynamic"></center>
+<center>  <br><input type="button" id="1" value="1" onclick="bindata()">
+  <input type="button" value="2" onclick="bindata()">
+  <input type="button" value="3" onclick="bindata()">
+  <input type="button" value="4" onclick="bindata()"></center>
+
+</div>
+</body>
+</html>
