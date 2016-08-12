@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>json with jquery</title>
+<style>
+
+table{background:#CCC;border:1px solid #000;}
+table td{padding:15px;border:1px solid #DDD;}
+
+</style>
+</head>
+
+<body>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>
+
+  var pageSize=3;
+  var currentPageNo=1;
+  var startId=0;
+  var endId=currentPageNo*pageSize;
+  var totalPageNumbers;
+  var objData;
+
+
+  //put the below code in document.ready
+  $(document).ready(function(){
+  $.getJSON('crime.json',function(jsonData)
+  {
+      objData = jsonData;
+
+      if(objData!=undefined)
+      {
+        totalPageNumbers = Math.ceil(objData.length / pageSize);
+        binddata(currentPageNo);
+      }
+  });
+});
+
+
+
+
+function binddata(pageNo)
+{
+  var currentPageNo=pageNo;
+  endId=(currentPageNo*pageSize);
+  startId=endId-pageSize;
+
+
+
+  $('#dynamictable').html("");
+  $('#dynamictable').append('<table></table>');
+  var table = $('#dynamictable').children();
+table.append("<tr><th>Year</th><th>Under 500</th> <th>Over 500</th></tr>")
+
+if(endId>objData.length)
+  endId=objData.length;
+
+for (counter=startId;counter<endId;counter++){
+  table.append("<tr><td>"+objData[counter].year+"</td><td>"+objData[counter].over500+"</td><td>"+objData[counter].under500+"</td></tr>");
+}
+
+$('#buttons').html("");
+for(counter=0;counter<totalPageNumbers;counter++)
+{
+  $('#buttons').append('<button type="button" class="btn btn-secondary" onclick="binddata('+ (counter+1) +')">'+ (counter+1) + '</button>');
+}
+
+
+}
+
+
+
+  </script>
+  <h1><center>Chicago crime Report</center></h1>
+<center>
+<div id="dynamictable"></center>
+</div>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-left:900px; margin-top:300px">
+  <div class="btn-group"  role="group" aria-label="First group" id="buttons">
+  </div>
+  </body>
+  </html>
